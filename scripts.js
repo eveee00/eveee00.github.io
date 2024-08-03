@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "tip: don't mine at night" },
         { text: "note: well here we are again, it's always such a pleasure..." },
         { text: "note: huge success" },
-
+        { text: "note: i'd just like to interject for a moment...", url: "/stallman.html" }
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -42,3 +42,4 @@ function randomlink() {
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
 }
 
+console.error("you nosy little shit, now close the consloe! >:3")
