@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         footer.appendChild(document.createTextNode(randomMessage.text));
     }
 });
-
+var geometryDash = new Audio('/media/gd.mp3');
 var randomlinks = [];
 randomlinks[0] = "https://www.youtube.com/watch?v=yGZr98GEs0U";
 randomlinks[1] = "https://www.youtube.com/watch?v=AS58aeJQI4Y";
@@ -41,3 +41,4 @@ randomlinks[6] = "/media/gd.mp3";
 function randomlink() {
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
 }
+

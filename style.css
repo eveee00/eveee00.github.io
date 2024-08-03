@@ -3,7 +3,7 @@ html, body {
     margin: 0;
 }
 
-body {
+body, .ds {
     background-color: rgb(39, 39, 39);
     font-family: 'Fira Code SemiBold', monospace;
     display: flex;
@@ -89,3 +89,11 @@ body {
 .music-note {
     margin-right: 5px;
 }
+
+.discordInfo {
+    color: rgb(255, 255, 255);
+    font-size: small;
+    margin-top: 1px;
+    font-family: 'Fira Code SemiBold', monospace;
+}
+
