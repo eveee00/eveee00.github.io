@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    font-family: 'Fira Code SemiBold', monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+.dsTitle, .dsHref {
+    color: rgb(255, 255, 255);
+    margin-bottom: 1px;
+}
+
+.discordInfo {
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    margin-top: 1px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    margin-bottom: 1px;
+}
+
+.mainInfo {
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    margin-top: 1px;
+}

@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     var messages = [
-        { text: "note: this site is horribly unfinished." },
-        { text: "note: i suck at coding." },
         { text: "note: near a tree by a river, there's a hole in the ground..." },
         { text: "note: :3" },
         { text: ":)", url: "/media/mystery.mp4" },

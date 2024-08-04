@@ -3,7 +3,7 @@ html, body {
     margin: 0;
 }
 
-body, .ds {
+body {
     background-color: rgb(39, 39, 39);
     font-family: 'Fira Code SemiBold', monospace;
     display: flex;
