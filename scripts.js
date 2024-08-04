@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "tip: don't mine at night" },
         { text: "note: well here we are again, it's always such a pleasure..." },
         { text: "note: huge success" },
-        { text: "note: i'd just like to interject for a moment...", url: "/stallman.html" }
+        { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" }
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
