@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "note: near a tree by a river, there's a hole in the ground..." },
         { text: "note: :3" },
         { text: ":)", url: "/media/mystery.mp4" },
-        { text: "note: yeah i know that the github button isn't aligned, i'll fix it later." },
+        { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
         { text: "tip: did you know? refreshing this site changes this text." },
         { text: "tip: don't mine at night" },
         { text: "note: well here we are again, it's always such a pleasure..." },
@@ -35,6 +35,9 @@ randomlinks[3] = "https://www.youtube.com/watch?v=M9J6DKJXoKk";
 randomlinks[4] = "https://www.youtube.com/watch?v=20dIl2fl5GM";
 randomlinks[5] = "https://www.youtube.com/watch?v=BwUBkKKP27A";
 randomlinks[6] = "/media/gd.mp3";
+randomlinks[7] = "https://www.youtube.com/watch?v=5kca9KVKy04";
+randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
+randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
 
 function randomlink() {
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);

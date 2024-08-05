@@ -53,6 +53,8 @@ body {
     border: 2px solid #555555;
     padding: 10px 20px;
     cursor:  pointer;
+    width: 130px;
+    height: 40px;
     font-family: Fira Code;
 }
 
@@ -71,7 +73,7 @@ body {
     justify-content: center;
 }
 
-.gh-logo {
+.top-logo {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -96,4 +98,3 @@ body {
     margin-top: 1px;
     font-family: 'Fira Code SemiBold', monospace;
 }
-
