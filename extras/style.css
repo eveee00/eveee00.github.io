@@ -68,3 +68,11 @@ body {
 #iframeDisplay {
     margin-top: 20px;
 }
+
+.top-logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 3px transparent #ffffff;
+    padding: 20px;
+}
