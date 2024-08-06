@@ -8,17 +8,8 @@ body {
     font-family: 'Fira Code SemiBold', monospace;
     display: flex;
     flex-direction: column;
-}
-
-.dsTitle, .dsHref {
-    color: rgb(255, 255, 255);
-    margin-bottom: 1px;
-}
-
-.discordInfo {
-    color: rgb(255, 255, 255);
-    font-size: medium;
-    margin-top: 1px;
+    align-items: center;
+    justify-content: center;
 }
 
 .content {
@@ -30,6 +21,17 @@ body {
     text-align: center;
 }
 
+.dsTitle, .dsHref {
+    color: rgb(255, 255, 255);
+    margin-bottom: 1px;
+}
+
+.info {
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    margin-top: 1px;
+}
+
 .title {
     color: rgb(255, 255, 255);
     margin-bottom: 1px;
@@ -39,4 +41,30 @@ body {
     color: rgb(255, 255, 255);
     font-size: medium;
     margin-top: 1px;
+}
+
+.tagInput {
+    font-size: smaller;
+}
+
+.bttn {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    font-family: 'Fira Code';
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.bttn:hover {
+    background-color: #555555;
+    color: white;
+}
+
+#iframeDisplay {
+    margin-top: 20px;
 }

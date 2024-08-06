@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira Code"> 
+</head>
+<title>Cat Generator (NG)</title>
+</head>
+<body>
+<div hx-ext="client-side-templates" class="content">
+    <h2 class="title">Cat Generator</h2>
+
+    <div class="content">
+        <div class="info">
+            <p>context: my sister made a meme generator a while back <a href="https://github.com/Olgawy/meme-generator-olga" class="info">(original repo)</a> <a href="https://github.com/Olgawy/meme-generator-olga/pull/1" class="info">(my pr)</a>, but it was broken since the api it was using went down.</p>
+            <p>so i found it funny to turn it into a cat generator using the cat-as-a-service api.</p>
+            <p>here is the new and improved one with some additional things.</p>
+            <p class="tagInput">enter tags (separate them with commas): (ex: orange,loaf)</p>
+        </div>
+        <input type="text" id="catText">
+        <button class="bttn" onclick="displayIframe()">Get cat!!</button>
+    </div>
+    <div id="iframeDisplay"></div>
+</div>  
+<script>
+    function displayIframe() {
+        var text = document.getElementById("catText").value;
+        var url;
+        if (text.trim() === "") {
+            url = "https://cataas.com/cat";
+        } else {
+            url = "https://cataas.com/cat/" + encodeURIComponent(text);
+        }
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"" + url + "\" height=\"400\" width=\"500\"></iframe>";
+    }
+</script>
+</body>
+</html>
