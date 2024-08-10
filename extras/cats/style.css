@@ -8,8 +8,6 @@ body {
     font-family: 'Fira Code SemiBold', monospace;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .content {
@@ -21,20 +19,9 @@ body {
     text-align: center;
 }
 
-.dsTitle, .dsHref {
-    color: rgb(255, 255, 255);
-    margin-bottom: 1px;
-}
-
-.info {
-    color: rgb(255, 255, 255);
-    font-size: medium;
-    margin-top: 1px;
-}
-
 .title {
     color: rgb(255, 255, 255);
-    margin-bottom: 1px;
+    margin-bottom: 10px;
 }
 
 .mainInfo {
@@ -43,31 +30,31 @@ body {
     margin-top: 1px;
 }
 
-.tagInput {
-    font-size: smaller;
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
+.containerBttn {
+    margin: 5px 0;
+}
 
 .bttn {
     background-color: white;
     color: black;
     border: 2px solid #555555;
     padding: 10px 20px;
-    cursor: pointer;
+    cursor:  pointer;
     width: 130px;
     height: 40px;
-    font-family: 'Fira Code';
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-family: Fira Code;
 }
 
 .bttn:hover {
     background-color: #555555;
     color: white;
-}
-
-#iframeDisplay {
-    margin-top: 20px;
 }
 
 .top-logo {
@@ -76,4 +63,27 @@ body {
     right: 0px;
     border: 3px transparent #ffffff;
     padding: 20px;
+}
+
+.cat-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cat-container {
+    text-align: center;
+}
+
+.cat-image {
+    width: 300px;
+    height: 300px;
+    border: 5px solid white;
+}
+
+.cat-name {
+    margin-top: 10px;
+    font-family: 'Fira Code SemiBold', monospace;
+    font-size: 20px;
+    color: #ffffff;
 }
