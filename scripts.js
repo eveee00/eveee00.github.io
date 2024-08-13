@@ -38,6 +38,7 @@ randomlinks[6] = "/media/gd.mp3";
 randomlinks[7] = "https://www.youtube.com/watch?v=5kca9KVKy04";
 randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
 randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
+randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
 
 function randomlink() {
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
