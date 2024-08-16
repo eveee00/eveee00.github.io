@@ -1,3 +1,4 @@
+console.log("randomizing footer...")
 document.addEventListener('DOMContentLoaded', function() {
     var messages = [
         { text: "note: near a tree by a river, there's a hole in the ground..." },
@@ -8,7 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "tip: don't mine at night" },
         { text: "note: well here we are again, it's always such a pleasure..." },
         { text: "note: huge success" },
-        { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" }
+        { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" },
+        { text: "note: sometimes it's ok to just guhhhhh" },
+        { text: "oobe says: please just log in with a microsoft account i swear we won't track you come on please!!11!1!" },
+        { text: "oobe says: what do you mean you have no wifi drivers installed? you need them!" },
+        { text: "oobe says: use our shit!" },
+        { text: "oobe says: even better, use an online account!" },
+        { text: "oobe says: please allow us to auto-import your data into our shitty browser we shove down your throat!" },
+        { text: "oobe hates: ~$ oobe\\bypassnro" },
+        { text: "note: in soviet russia, arch installs you." },
+        { text: "note: ¯\\_(ツ)_/¯" },
+        { text: "oobe says: no, we won't give you an option to just skip the m$ account!!" },
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -41,6 +52,7 @@ randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
 randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
 
 function randomlink() {
+    console.log("randomizing link for music...")
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
 }
 
