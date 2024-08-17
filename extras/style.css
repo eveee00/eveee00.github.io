@@ -58,7 +58,7 @@ body {
     height: 40px;
     font-family: 'Fira Code';
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 .bttn:hover {
@@ -76,4 +76,10 @@ body {
     right: 0px;
     border: 3px transparent #ffffff;
     padding: 20px;
+}
+
+.bttnInfo {
+    color: rgb(255, 255, 255);
+    font-size: small;
+    margin-top: 1px;
 }
