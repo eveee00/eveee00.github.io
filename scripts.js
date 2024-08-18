@@ -1,5 +1,7 @@
-console.log("randomizing footer...")
 document.addEventListener('DOMContentLoaded', function() {
+    // Open the "info" tab by default
+    openTab(null, 'info');
+    //stuff for randomized footer
     var messages = [
         { text: "note: near a tree by a river, there's a hole in the ground..." },
         { text: "note: :3" },
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "note: in soviet russia, arch installs you." },
         { text: "note: ¯\\_(ツ)_/¯" },
         { text: "oobe says: no, we won't give you an option to just skip the m$ account!!" },
+        { text: "proudly made with: google search results, random ideas at 3am and chatgpt." },
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -57,3 +60,31 @@ function randomlink() {
 }
 
 console.error("you nosy little shit, now close the consloe! >:3")
+
+
+
+function openTab(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    if (evt) {
+        evt.currentTarget.className += " active";
+    } else {
+        // If the function is called without an event, manually add the active class to the "info" tab
+        document.querySelector('.tab button.tablinks').className += " active";
+    }
+}
