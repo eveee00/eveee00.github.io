@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "note: in soviet russia, arch installs you." },
         { text: "note: ¯\\_(ツ)_/¯" },
         { text: "oobe says: no, we won't give you an option to just skip the m$ account!!" },
-        { text: "proudly made with: google search results, random ideas at 3am and chatgpt." },
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
