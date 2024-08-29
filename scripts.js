@@ -52,6 +52,7 @@ randomlinks[7] = "https://www.youtube.com/watch?v=5kca9KVKy04";
 randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
 randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
 randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
+randomlinks[11] = "https://www.youtube.com/watch?v=FmW6RNT2jC";
 
 function randomlink() {
     console.log("randomizing link for music...")
