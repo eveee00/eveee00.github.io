@@ -57,7 +57,7 @@ body {
     cursor: pointer;
     width: 130px;
     height: 40px;
-    font-family: 'Fira Code';
+    font-family: 'Fira Code SemiBold', monospace;
 }
 
 .bttn:hover {
@@ -107,6 +107,7 @@ body {
     padding: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    font-family: 'Fira Code', monospace;
 }
 
 
@@ -121,7 +122,7 @@ body {
     transition: 0.3s;
     border-radius: 10px;
     font-size: 16px;
-    font-family: Fira Code SemiBold;
+    font-family: 'Fira Code', monospace;
 }
 
 
@@ -169,7 +170,7 @@ body {
 
 .cat-name {
     margin-top: 10px;
-    font-family: 'Fira Code SemiBold', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 20px;
     color: #ffffff;
 }
