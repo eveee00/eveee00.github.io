@@ -78,6 +78,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-family: 'Fira Code', monospace;
 }
 
 .top-logo {
@@ -91,7 +99,7 @@ body {
 .noteMS {
     margin-right: 10px;
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     left: 10px;
 }
 
