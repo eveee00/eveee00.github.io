@@ -15,13 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "note: sometimes it's ok to just guhhhhh" },
         { text: "oobe says: please just log in with a microsoft account i swear we won't track you come on please!!11!1!" },
         { text: "oobe says: what do you mean you have no wifi drivers installed? you need them!" },
-        { text: "oobe says: use our shit!" },
-        { text: "oobe says: even better, use an online account!" },
         { text: "oobe says: please allow us to auto-import your data into our shitty browser we shove down your throat!" },
         { text: "oobe hates: ~$ oobe\\bypassnro" },
         { text: "note: in soviet russia, arch installs you." },
         { text: "note: ¯\\_(ツ)_/¯" },
-        { text: "oobe says: no, we won't give you an option to just skip the m$ account!!" },
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -59,8 +56,8 @@ function randomlink() {
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
 }
 
-console.error("you nosy little shit, now close the consloe! >:3")
-
+console.error("you nosy little shit, now close the console! >:3")
+// LMAOOOO I MADE A SPELLING MISTAKE AND ONLY NOW NOTICED IT
 
 
 function openTab(evt, cityName) {
