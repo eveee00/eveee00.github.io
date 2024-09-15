@@ -4,7 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <script src="scripts.js"></script>
-
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap">
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
@@ -22,6 +21,17 @@
             <button class="tablinks" onclick="openTab(event, 'projects')">projects</button>
             <button class="tablinks" onclick="openTab(event, 'specs')">specs</button>
             <button class="tablinks" onclick="openTab(event, 'coolPeople')">cool people</button>
+        </div>
+        <!-- stuff for mobile-->
+        <div class="dropdown">
+            <select id="mobileTab" onchange="openTabFromDropdown(event)">
+                <option value="info">Info</option>
+                <option value="links">Links</option>
+                <option value="projects">Projects</option>
+                <option value="specs">Specs</option>
+                <option value="coolPeople">Cool People</option>
+            </select>
+            <img src="/media/dropdown.svg">
         </div>
             <div>
                <div class="wave"></div>
