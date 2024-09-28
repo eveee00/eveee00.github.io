@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "oobe hates: ~$ oobe\\bypassnro" },
         { text: "note: in soviet russia, arch installs you." },
         { text: "note: ¯\\_(ツ)_/¯" },
+        { text: "purchase your tracks today", url: "https://www.youtube.com/watch?v=vr2ays5a-Rc.mp4"},
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -50,6 +51,7 @@ randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
 randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
 randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
 randomlinks[11] = "https://www.youtube.com/watch?v=FmW6RNT2jCs";
+randomlinks[12] = "https://www.youtube.com/watch?v=W_qNvDLDHd0";
 
 function randomlink() {
     console.log("randomizing link for music...")
