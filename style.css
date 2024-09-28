@@ -104,6 +104,8 @@ body {
     .disclaimer {
         position: sticky; /* Sticky instead of fixed */
         bottom: 0;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -124,6 +126,23 @@ body {
 
 .music-note {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .noteMS {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        bottom: 5px;
+        left: 10px;
+        padding: 10px;
+    }
+    
+    .music-note {
+        margin-right: auto;
+        margin-left: 0;
+    }
 }
 
 
