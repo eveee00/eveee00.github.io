@@ -19,9 +19,6 @@ body {
     min-height: 100vh;
     margin: 0;
     overflow: auto;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,93,1) 35%, rgb(0, 105, 126) 98%);
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
     background-attachment: fixed;
 }
 
@@ -206,42 +203,6 @@ body {
     font-size: small;
     margin-top: 1px;
 }
- /* this was made by Bárbara Rodríguez on https://freefrontend.com/css-animated-backgrounds/. i was to lazy to make it myself. */
-@keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-
-
-@keyframes wave {
-    2% {
-        transform: translateX(1);
-    }
-
-    25% {
-        transform: translateX(-25%);
-    }
-
-    50% {
-        transform: translateX(-50%);
-    }
-
-    75% {
-        transform: translateX(-25%);
-    }
-
-    100% {
-        transform: translateX(1);
-    }
-}
-
 /* please let this work and fix mobile view */
 
 .dropdown {
