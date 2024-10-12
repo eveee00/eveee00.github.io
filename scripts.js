@@ -11,7 +11,7 @@ var messages = [
     { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
     { text: "tip: did you know? refreshing this site changes this text." },
     { text: "tip: don't mine at night" , url: "https://www.youtube.com/watch?v=X_XGxzMrq04"},
-    { text: "note: well here we are again, it's always such a pleasure..." },
+    { text: "note: well here we are again, it's always such a pleasure...", url: "https://www.youtube.com/watch?v=yGZr98GEs0U" },
     { text: "note: huge success" },
     { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" },
     { text: "note: sometimes it's ok to just guhhhhh" },
@@ -32,7 +32,26 @@ var messages = [
     { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
     { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
     { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
-    { text: "the buttons are broken, i know. i will fix them later"}
+    { text: "the buttons are broken, i know. i will fix them later" },
+    { text: "i67 was here" },
+    { text: "yeah, the stallman one doesn't work right now." },
+    { text: "note: the fake geometry dash ost is fire", url: "https://www.youtube.com/watch?v=AS58aeJQI4Y" },
+    { text: "ALL MY FELLAS", url: "https://www.youtube.com/watch?v=cygu65ytwTc"},
+    { text: "note: it starts with one thing...", url: "https://www.youtube.com/watch?v=M9J6DKJXoKk" },
+    { text: "nothing feels like home", url: "https://www.youtube.com/watch?v=20dIl2fl5GM" },
+    { text: "popcorn after popcorn?", url: "https://www.youtube.com/watch?v=BwUBkKKP27A" },
+    { text: "GEOMETRY DASH", url: "/media/gd.mp3" },
+    { text: "note: awaken cooked with this one", url: "https://www.youtube.com/watch?v=5kca9KVKy04"},
+    { text: "ost 07", url: "https://www.youtube.com/watch?v=utP11PQEsZw"},
+    { text: "my windows after i install free minecraft", url: "https://www.youtube.com/watch?v=5BZLz21ZS_Y" },
+    { text: "the 4 peters if they were cool", url: "https://www.youtube.com/watch?v=Si8PyULlt7Q"},
+    { text: "99 DAWWllers, but everywhere", url: "https://www.youtube.com/watch?v=FmW6RNT2jCs"},
+
+
+
+
+
+    
 
 ];
 function messagesindex() { //useful debugging function: check how many messages there are
@@ -128,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // i'll just leave it here.
 // yeah.
 
+// yeah i removed it lmao
 
 
 function randomlink() {
@@ -154,20 +174,3 @@ function showSection(sectionId, element) {
     });
     element.classList.add('active-tab');
 }
-
-
-
-var randomlinks = [];
-randomlinks[0] = "https://www.youtube.com/watch?v=yGZr98GEs0U";
-randomlinks[1] = "https://www.youtube.com/watch?v=AS58aeJQI4Y";
-randomlinks[2] = "https://www.youtube.com/watch?v=cygu65ytwTc";
-randomlinks[3] = "https://www.youtube.com/watch?v=M9J6DKJXoKk";
-randomlinks[4] = "https://www.youtube.com/watch?v=20dIl2fl5GM";
-randomlinks[5] = "https://www.youtube.com/watch?v=BwUBkKKP27A";
-randomlinks[6] = "/media/gd.mp3";
-randomlinks[7] = "https://www.youtube.com/watch?v=5kca9KVKy04";
-randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
-randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
-randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
-randomlinks[11] = "https://www.youtube.com/watch?v=FmW6RNT2jCs";
-randomlinks[12] = "https://www.youtube.com/watch?v=W_qNvDLDHd0";
