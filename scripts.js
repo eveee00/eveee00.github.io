@@ -1,3 +1,6 @@
+// i didn't want to rewrite the whole js file, so i'm gonna just remove stuff like the tab system later.
+// i also removed some of the footer text about the windows OOBE, since it wasn't even remotely funny.
+
 document.addEventListener('DOMContentLoaded', function() {
     // Open the "info" tab by default
     openTab(null, 'info');
@@ -8,18 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: ":)", url: "/media/mystery.mp4" },
         { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
         { text: "tip: did you know? refreshing this site changes this text." },
-        { text: "tip: don't mine at night" },
+        { text: "tip: don't mine at night" , url: "https://www.youtube.com/watch?v=X_XGxzMrq04"},
         { text: "note: well here we are again, it's always such a pleasure..." },
         { text: "note: huge success" },
         { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" },
         { text: "note: sometimes it's ok to just guhhhhh" },
-        { text: "oobe says: please just log in with a microsoft account i swear we won't track you come on please!!11!1!" },
-        { text: "oobe says: what do you mean you have no wifi drivers installed? you need them!" },
-        { text: "oobe says: please allow us to auto-import your data into our shitty browser we shove down your throat!" },
-        { text: "oobe hates: ~$ oobe\\bypassnro" },
         { text: "note: in soviet russia, arch installs you." },
         { text: "note: ¯\\_(ツ)_/¯" },
         { text: "purchase your tracks today", url: "https://www.youtube.com/watch?v=vr2ays5a-Rc.mp4"},
+        { text: "99 DAWWllers", url: "https://www.youtube.com/watch?v=vZOu7zhxGeI"},
+        { text: "100 sachne 80", url: "https://www.youtube.com/watch?v=R-v2Ao8h8Tw"},
+        { text: "note: i had to rewrite this whole mess since i didn't understand my own codebase" },
+        { text: "note: next time i'll commenmt more" },
+        { text: "note: some of the quotes here were stolen from the loadingquotes vencord plugin (sorry)" },
+        { text: "thinking of a funny quote..." },
+        { text: "welcome to nginx!" },
+        { text: "�(repeat like 30 times)" },
+        { text: "note: i'm not a cat.. or am i?", url: "https://www.youtube.com/watch?v=32EJg8lqJgQ" },
+        // holy shit copilot suggested the message above ... and i added the "or am i part"
+        { text: "i don't remember this being in the ost", url: "https://www.youtube.com/watch?v=rGITOAjbABc" },
+        { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
+        { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
+        { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
+
+
     ];
 
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
