@@ -12,13 +12,30 @@
     <script src="/scripts.js"></script>
 </head>
 <body>
-    <div>
-        <h1>welcome to my page!</h1>
-        <p>heyo! i'm evy, but you can also call me max. i'm interested in everything to do with computers.</p>
-        <p>here you can find all my projects and social media.</p>
-        <p>i post rarely, and i don't really have many projects i'm actively working on.</p>
-        <p>but i'm always open to new ideas, just shoot me a dm on discord!</p>
-        <p>i'm still just a beginner programmer though, but i'm currently learning c#.</p>
+    <div class="tab-bar">
+        <a href="#home" onclick="showSection('home', this)">home</a>
+        <a href="#links" onclick="showSection('links', this)">links</a>
+        <a href="#contact" onclick="showSection('contact', this)">Contact</a>
     </div>
+    <div id="home" class="main">
+        <h1>welcome to my page!</h1>
+        <p>heyo! I'm evy, but you can also call me max. I'm interested in everything to do with computers.</p>
+        <p>here you can find all my projects and social media.</p>
+        <p>i post rarely, and I don't really have many projects I'm actively working on.</p>
+        <p>but I'm always open to new ideas, just shoot me a dm on discord!</p>
+        <p>i'm still just a beginner programmer though, but i'm currently learning C#.</p>
+    </div>
+    <div id="links" class="main" style="display:none;">
+        <h1>projects</h1>
+        <p>these are the projects i'm working on. there is currently not much here though.</p>
+        <button style="--clr:#0FF0FC"><span>this site</span><i></i></button>
+        <p class="bttnInfo">website that you're currently on.</p>
+    </div>
+    <div id="contact" class="main" style="display:none;">
+        <h1>Contact Me</h1>
+        <p></p>
+    </div>
+    <script>
+    </script>
 </body>
 </html>

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "welcome to nginx!" },
         { text: "�(repeat like 30 times)" },
         { text: "note: i'm not a cat.. or am i?", url: "https://www.youtube.com/watch?v=32EJg8lqJgQ" },
-        // holy shit copilot suggested the message above ... and i added the "or am i part"
+        // holy shit copilot suggested the message above ... and i added the "or am i" part
         { text: "i don't remember this being in the ost", url: "https://www.youtube.com/watch?v=rGITOAjbABc" },
         { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
         { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
@@ -76,54 +76,16 @@ function randomlink() {
 console.error("you nosy little shit, now close the console! >:3")
 // LMAOOOO I MADE A SPELLING MISTAKE AND ONLY NOW NOTICED IT
 
+function showSection(sectionId, element) {
+    var sections = document.querySelectorAll('.main');
+    sections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
 
-function openTab(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-  
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    if (evt) {
-        evt.currentTarget.className += " active";
-    } else {
-        // If the function is called without an event, manually add the active class to the "info" tab
-        document.querySelector('.tab button.tablinks').className += " active";
-    }
-}
-
-function openTabFromDropdown(event) {
-    const tabName = event.target.value;
-    openTab(null, tabName);
-}
-
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-
-    if (evt) {
-        evt.currentTarget.className += " active";
-    }
+    var tabs = document.querySelectorAll('.tab-bar a');
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active-tab');
+    });
+    element.classList.add('active-tab');
 }
