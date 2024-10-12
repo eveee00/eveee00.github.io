@@ -67,6 +67,7 @@ button {
     color: var(--clr);
     /* box-shadow: 0 0 35px var(--clr); */
     animation: box 3s infinite;
+    cursor: pointer;
   }
   
   button::before {
