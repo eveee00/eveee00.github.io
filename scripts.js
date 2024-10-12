@@ -1,114 +1,176 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Open the "info" tab by default
-    openTab(null, 'info');
-    //stuff for randomized footer
-    var messages = [
-        { text: "note: near a tree by a river, there's a hole in the ground..." },
-        { text: "note: :3" },
-        { text: ":)", url: "/media/mystery.mp4" },
-        { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
-        { text: "tip: did you know? refreshing this site changes this text." },
-        { text: "tip: don't mine at night" },
-        { text: "note: well here we are again, it's always such a pleasure..." },
-        { text: "note: huge success" },
-        { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" },
-        { text: "note: sometimes it's ok to just guhhhhh" },
-        { text: "oobe says: please just log in with a microsoft account i swear we won't track you come on please!!11!1!" },
-        { text: "oobe says: what do you mean you have no wifi drivers installed? you need them!" },
-        { text: "oobe says: please allow us to auto-import your data into our shitty browser we shove down your throat!" },
-        { text: "oobe hates: ~$ oobe\\bypassnro" },
-        { text: "note: in soviet russia, arch installs you." },
-        { text: "note: ¯\\_(ツ)_/¯" },
-        { text: "purchase your tracks today", url: "https://www.youtube.com/watch?v=vr2ays5a-Rc.mp4"},
-    ];
+// i didn't want to rewrite the whole js file, so i'm gonna just remove stuff like the tab system later.
+// update: i remade the tab system.
+// i also removed some of the footer text about the windows OOBE, since it wasn't even remotely funny.
 
-    var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+// i removed this and it broke a bunch of stuff, so i'll just deal with the shitty error i get in the console.
+//stuff for randomized footer
+var messages = [
+    { text: "note: near a tree by a river, there's a hole in the ground..." },
+    { text: "note: :3" },
+    { text: ":)", url: "/media/mystery.mp4" },
+    { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
+    { text: "tip: did you know? refreshing this site changes this text." },
+    { text: "tip: don't mine at night" , url: "https://www.youtube.com/watch?v=X_XGxzMrq04"},
+    { text: "note: well here we are again, it's always such a pleasure...", url: "https://www.youtube.com/watch?v=yGZr98GEs0U" },
+    { text: "note: huge success" },
+    { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" },
+    { text: "note: sometimes it's ok to just guhhhhh" },
+    { text: "note: in soviet russia, arch installs you." },
+    { text: "note: ¯\\_(ツ)_/¯" },
+    { text: "purchase your tracks today", url: "https://www.youtube.com/watch?v=vr2ays5a-Rc.mp4"},
+    { text: "99 DAWWllers", url: "https://www.youtube.com/watch?v=vZOu7zhxGeI"},
+    { text: "100 sachne 80", url: "https://www.youtube.com/watch?v=R-v2Ao8h8Tw"},
+    { text: "note: i had to rewrite this whole mess since i didn't understand my own codebase" },
+    { text: "note: next time i'll commenmt more" },
+    { text: "note: some of the quotes here were stolen from the loadingquotes vencord plugin (sorry)" },
+    { text: "thinking of a funny quote..." },
+    { text: "welcome to nginx!" },
+    { text: "�(repeat like 30 times)" },
+    { text: "note: i'm not a cat.. or am i?", url: "https://www.youtube.com/watch?v=32EJg8lqJgQ" },
+    // holy shit copilot suggested the message above ... and i added the "or am i" part 
+    { text: "i don't remember this being in the ost", url: "https://www.youtube.com/watch?v=rGITOAjbABc" },
+    { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
+    { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
+    { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
+    { text: "the buttons are broken, i know. i will fix them later" },
+    { text: "i67 was here" },
+    { text: "yeah, the stallman one doesn't work right now." },
+    { text: "note: the fake geometry dash ost is fire", url: "https://www.youtube.com/watch?v=AS58aeJQI4Y" },
+    { text: "ALL MY FELLAS", url: "https://www.youtube.com/watch?v=cygu65ytwTc"},
+    { text: "note: it starts with one thing...", url: "https://www.youtube.com/watch?v=M9J6DKJXoKk" },
+    { text: "nothing feels like home", url: "https://www.youtube.com/watch?v=20dIl2fl5GM" },
+    { text: "popcorn after popcorn?", url: "https://www.youtube.com/watch?v=BwUBkKKP27A" },
+    { text: "GEOMETRY DASH", url: "/media/gd.mp3" },
+    { text: "note: awaken cooked with this one", url: "https://www.youtube.com/watch?v=5kca9KVKy04"},
+    { text: "ost 07", url: "https://www.youtube.com/watch?v=utP11PQEsZw"},
+    { text: "my windows after i install free minecraft", url: "https://www.youtube.com/watch?v=5BZLz21ZS_Y" },
+    { text: "the 4 peters if they were cool", url: "https://www.youtube.com/watch?v=Si8PyULlt7Q"},
+    { text: "99 DAWWllers, but everywhere", url: "https://www.youtube.com/watch?v=FmW6RNT2jCs"},
 
-    var footer = document.getElementById('footer');
-    footer.innerHTML = '<input class="noteMS" type="image" height="30" width="30" src="/media/music.png" name="B1" onclick="randomlink()"><span class="music-note"></span>';
+
+
+
+
+    
+
+];
+function messagesindex() { //useful debugging function: check how many messages there are
+    console.log("the messages array has " + (messages.length - 1) + " items");
+
+    // Count and log the number of messages with a link
+    var messagesWithLink = messages.filter(message => message.url).length;
+    console.log("the messages array has " + messagesWithLink + " items with a link");
+}
+
+function showMessages() { //useful debugging function: show all messages in the console
+    console.log("here are the messages: ");
+    for (var i = 0; i < messages.length; i++) {
+        var messageText = i + ": '" + messages[i].text + "'";
+        if (messages[i].url) {
+            messageText += " HAS LINK: " + messages[i].url;
+        }
+        console.log(messageText);
+    }
+}
+
+// Define the function to update the footer message
+function updateFooterMessage(index) {
+    if (index === 'last') {
+        index = messages.length - 1;
+    }
+    if (typeof index !== 'number') {
+        console.error("Invalid input. Please provide a number as the index.");
+        return;
+    }
+    if (index < 0 || index >= messages.length) {
+        console.error("Invalid index. Please provide a valid index between 0 and " + (messages.length - 1));
+        return;
+    }
+    
+    var randomMessage = messages[index];
+    var messageContainer = document.querySelector('.message-container');
+    messageContainer.innerHTML = '';
 
     if (randomMessage.url) {
         var link = document.createElement('a');
         link.href = randomMessage.url;
         link.textContent = randomMessage.text;
         link.style.color = "white"; // Change the color if needed
-        footer.appendChild(link);
+        link.target = "_blank"; //makes link open in new tab hopefully
+        messageContainer.appendChild(link);
     } else {
-        footer.appendChild(document.createTextNode(randomMessage.text));
+        messageContainer.appendChild(document.createTextNode(randomMessage.text));
     }
+    console.log("message updated to: " + index);
+}
+// Example usage: updateFooterMessage(0); // This will update the footer with the first message
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateFooterMessage(Math.floor(Math.random() * messages.length));
 });
-var geometryDash = new Audio('/media/gd.mp3');
-var randomlinks = [];
-randomlinks[0] = "https://www.youtube.com/watch?v=yGZr98GEs0U";
-randomlinks[1] = "https://www.youtube.com/watch?v=AS58aeJQI4Y";
-randomlinks[2] = "https://www.youtube.com/watch?v=cygu65ytwTc";
-randomlinks[3] = "https://www.youtube.com/watch?v=M9J6DKJXoKk";
-randomlinks[4] = "https://www.youtube.com/watch?v=20dIl2fl5GM";
-randomlinks[5] = "https://www.youtube.com/watch?v=BwUBkKKP27A";
-randomlinks[6] = "/media/gd.mp3";
-randomlinks[7] = "https://www.youtube.com/watch?v=5kca9KVKy04";
-randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
-randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
-randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
-randomlinks[11] = "https://www.youtube.com/watch?v=FmW6RNT2jCs";
-randomlinks[12] = "https://www.youtube.com/watch?v=W_qNvDLDHd0";
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    console.error("you nosy little shit, now close the console! >:3")
+    console.error("unless you contribute to coding and need to debug some stuff")
+    
+    //tab stuff
+    document.addEventListener('DOMContentLoaded', function() {
+        // Open the "info" tab by default
+        openTab(null, 'info');
+    
+        // Check if there's a last opened tab stored in localStorage
+        var lastTab = localStorage.getItem('lastTab');
+        console.log('last tab from localStorage:', lastTab)
+        if (lastTab) {
+            openTab(null, lastTab);
+        } else {
+            console.error('No last tab found in localStorage.');
+        }
+    
+        // Add event listeners to tab buttons to store the last opened tab
+        var tablinks = document.getElementsByClassName('tablinks');
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].addEventListener('click', function(evt) {
+                var cityName = evt.currentTarget.getAttribute('data-city');
+                console.log('Clicked tab data-city:', cityName);
+                localStorage.setItem('lastTab', cityName);
+            });
+        }
+    });
+});
+
+
+// does this even get used? i don't think so.
+// i should probably remove it.
+// nah, it could break stuff.
+// i'll just leave it here.
+// yeah.
+
+// yeah i removed it lmao
+
 
 function randomlink() {
     console.log("randomizing link for music...")
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
 }
 
-console.error("you nosy little shit, now close the console! >:3")
+console.warn("you nosy little shit, now close the console! >:3")
 // LMAOOOO I MADE A SPELLING MISTAKE AND ONLY NOW NOTICED IT
+console.warn("unless you actually know what you're doing (unlike me)")
+console.warn("by the way, you should NEVER paste stuff into here unless you exactly know what it does.")
 
 
-function openTab(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-  
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    if (evt) {
-        evt.currentTarget.className += " active";
-    } else {
-        // If the function is called without an event, manually add the active class to the "info" tab
-        document.querySelector('.tab button.tablinks').className += " active";
-    }
-}
+function showSection(sectionId, element) {
+    var sections = document.querySelectorAll('.main');
+    sections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
 
-function openTabFromDropdown(event) {
-    const tabName = event.target.value;
-    openTab(null, tabName);
-}
-
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-
-    if (evt) {
-        evt.currentTarget.className += " active";
-    }
+    var tabs = document.querySelectorAll('.tab-bar a');
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active-tab');
+    });
+    element.classList.add('active-tab');
 }

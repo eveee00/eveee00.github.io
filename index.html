@@ -1,144 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<script src="scripts.js"></script>
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evy's page</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts.js"></script>
 </head>
-<title>
-    Evy's page 😺
-</title>
-
 <body>
-    <div class="content">
-        <!-- Tab links. -->
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'info')">info</button>
-            <button class="tablinks" onclick="openTab(event, 'links')">links</button>
-            <button class="tablinks" onclick="openTab(event, 'projects')">projects</button>
-            <button class="tablinks" onclick="openTab(event, 'specs')">specs</button>
-            <button class="tablinks" onclick="openTab(event, 'coolPeople')">cool people</button>
-        </div>
-        <!-- stuff for mobile-->
-        <div class="dropdown">
-            <select id="mobileTab" onchange="openTabFromDropdown(event)">
-                <option value="info">Info</option>
-                <option value="links">Links</option>
-                <option value="projects">Projects</option>
-                <option value="specs">Specs</option>
-                <option value="coolPeople">Cool People</option>
-            </select>
-            <!-- I'll fix this shit later -->
-            <img src="/media/dropdown.svg">
-        </div>
-        <!-- Tab content -->
-        <div id="info" class="tabcontent">
-            <h1 class="title">evy's page</h1>
-            <div class="mainInfo">
-                <p>heya 👋! i'm evy, you can also call me max. i'm a nonbinary person that is interested in computers 'n stuff.</p>
-                <p>there is currently not much here, but i hope that as i gain coding experience, i'll add stuff.</p>
-                <p>look around this page for a bit, maybe refresh it even a couple of times :)</p>
-            </div>
-        </div>
-
-        <div id="links" class="tabcontent">
-            <div class="mainInfo">
-                socials:
-            </div>
-            <div class="buttonsContainer">
-                <div class="containerBttn">
-                    <button type="button" class="bttn" onclick="window.open('https://www.youtube.com/@Max373-1.0')">my youtube</button>
-                </div>
-                <div class="containerBttn">
-                    <button type="button" class="bttn" onclick="window.open('https://twitter.com/eveee0000')">my twitter</button>
-                </div>
-                <div class="containerBttn">
-                    <button type="button" class="bttn" onclick="window.open('https://blahaj.zone/@eveee')">fediverse!</button>
-                </div>
-                <div class="containerBttn">
-                    <button type="button" class="bttn" onclick="window.open('https://github.com/eveee00')">my github</button>
-                </div>
-                <div class="containerBttn">
-                    <img class="center-image" src="https://lanyard.cnrad.dev/api/675299056070688789" alt="Discord Status" width="350px">
-                </div>
-            </div>
-        </div>
-
-        <div id="projects" class="tabcontent">
-            <div class="content">
-                <h1 class="title">projects</h1>
-                <div class="mainInfo">
-                    <p>these are the projects i'm working on. there is currently not much here though.</p>
-                </div>
-                <div class="buttonsContainer">
-                    <div class="containerBttn">
-                        <button type="button" class="bttn" onclick="window.open('https://github.com/eveee00/eveee00.github.io')">this site</button>
-                    </div>
-                    <div class="bttnInfo">
-                        <p>website you're currently on.</p>
-                    </div>
-                    <div class="containerBttn">
-                        <button type="button" class="bttn" onclick="window.open('https://github.com/eveee00/vmware-discordrpc')">vmware-rpc</button>
-                    </div>
-                    <div class="bttnInfo">
-                        <p>a discord rich presence for vmware written in python.</p>
-                    </div>
-                    <div class="containerBttn">
-                        <button type="button" class="bttn" onclick="window.open('https://eveee00.github.io/webPOST/')">webpost</button>
-                    </div>
-                    <div class="bttnInfo">
-                        <p>an attemt to recreate an old-style post screen</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="specs" class="tabcontent">
-
-            <body>
-                <div class="content">
-                    <h1 class="title">
-                        pc specs
-                    </h1>
-                    <div class="mainInfo">
-                        <p>cpu: amd ryzen 7 5800x</p>
-                        <p>gpu: nvidia rtx 3060</p>
-                        <p>motherboard: msi mag b550 tomahawk</p>
-                        <p>os: endeavouros</p>
-                        <p>de: kde plasma 6</p>
-                        <p>storage: samsung ssd 990 evo 2tb</p>
-                        <p>ram: corsair vengeance lpx 4x 8gb</p>
-                    </div>
-                </div>
-        </div>
-        <div id="coolPeople" class="tabcontent">
-            <div class="content">
-                <h1 class="title">cool people</h1>
-                <div class="mainInfo">
-                    <p>some cool people i know.</p>
-                </div>
-                <div class="buttonsContainer">
-                    <div class="containerBttn">
-                        <button type="button" class="bttn" onclick="window.open('https://roterzeiger.github.io')">roterzeiger</button>
-                    </div>
-                    <div class="containerBttn">
-                        <button type="button" class="bttn" onclick="window.open('https://icey67.github.io')">icey67</button>
-                    </div>
-                    <div class="containerBttn">
-                        <button type="button" class="bttn" onclick="window.open('https://github.com/Olgawy')">olgawy</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="logos">
+        <input type="image" src="/media/ppage.svg" alt="pronounsPage" height="30" width="30" onclick="window.open('https://en.pronouns.page/@eveee00')" title="PronounsPage">
+        <input type="image" src="/media/github-mark-white.svg" alt="pronounsPage" height="30" width="30" onclick="window.open('https://github.com/eveee00')" title="Visit my Github">
     </div>
-    <div class="top-logo">
-        <input type="image" src="/media/ppage.svg" alt="pronounsPage" height="30" width="30" onclick="window.open('https://en.pronouns.page/@eveee00')">
+    <div class="tab-bar">
+        <a href="#home" onclick="showSection('home', this)">home</a>
+        <a href="#links" onclick="showSection('links', this)">links</a>
+        <a href="#projects" onclick="showSection('projects', this)">projects</a>
+        <a href="#specs" onclick="showSection('specs', this)">specs</a>
+    </div>
+    
+    <div id="home" class="main">
+        <h1>welcome to my page!</h1>
+        <p>heyo! I'm evy, but you can also call me max. I'm interested in everything to do with computers.</p>
+        <p>here you can find all my projects and social media.</p>
+        <p>i post rarely, and I don't really have many projects I'm actively working on.</p>
+        <p>but I'm always open to new ideas, just shoot me a dm on discord!</p>
+        <p>i'm still just a beginner programmer though, but i'm currently learning C#.</p>
+    </div>
+    <div id="links" class="main" style="display:none;">
+        <h1>socials:</h1>
+        <div id="links-buttons">
+            <button style="--clr:#0FF0FC" onclick="window.open('https://www.youtube.com/@max373-1.0', '_blank')">
+                <span>youtube</span><i></i>
+            </button>
+            <button style="--clr:#0FF0FC" onclick="window.open('https://twitter.com/eveee00000', '_blank')">
+                <span>twitter</span><i></i>
+            </button>
+            <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/', '_blank')">
+                <span>github</span><i></i>
+            </button>
+        </div>
+        <img class="center-image" src="https://lanyard.cnrad.dev/api/675299056070688789" alt="Discord Status" width="350px">
+    </div>
+    
+    <div id="projects" class="main" style="display:none;">
+        <h1>projects</h1>
+        <p>these are the projects i'm working on. there is currently not much here though.</p>
+        <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/eveee00.github.io', '_blank')"><span>this site</span><i></i></button>
+        <p class="bttnInfo">website that you're currently on.</p>
+        <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/vmware-discordrpc', '_blank')"><span>vmware-rpc</span><i></i></button>
+        <p class="bttnInfo">a discord rich presence for vmware written in python.</p>
+        <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/eveee00.github.io', '_blank')"><span>this site</span><i></i></button>
+        <p class="bttnInfo">website that you're currently on.</p>
+    </div>
+    <div id="specs" class="main" style="display:none;">
+        <h1>pc specs</h1>
+        <p>cpu: amd ryzen 7 5800x</p>
+        <p>gpu: nvidia rtx 3060</p>
+        <p>motherboard: msi mag b550 tomahawk</p>
+        <p>os: endeavouros</p>
+        <p>de: kde plasma 6.2</p>
+        <p>storage: samsung ssd 990 evo 2tb</p>
+        <p>ram: corsair vengeance lpx 4x 8gb</p>
     </div>
     <footer class="disclaimer" id="footer">
-        <input class="noteMS" type="image" height="30" width="30" src="/media/music.png" name="B1" onclick="randomlink()">
-        <span class="music-note"></span> If you see this, the randomizer is broken. refresh the page!
+        <div class="message-container">
+            If you see this, randomizer is broken. open a issue on the github repo. (or a pull request if you know how to fix it)
+        </div>
     </footer>
-    </body>
+</body>
 </html>
