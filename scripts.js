@@ -3,79 +3,132 @@
 // i also removed some of the footer text about the windows OOBE, since it wasn't even remotely funny.
 
 // i removed this and it broke a bunch of stuff, so i'll just deal with the shitty error i get in the console.
+//stuff for randomized footer
+var messages = [
+    { text: "note: near a tree by a river, there's a hole in the ground..." },
+    { text: "note: :3" },
+    { text: ":)", url: "/media/mystery.mp4" },
+    { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
+    { text: "tip: did you know? refreshing this site changes this text." },
+    { text: "tip: don't mine at night" , url: "https://www.youtube.com/watch?v=X_XGxzMrq04"},
+    { text: "note: well here we are again, it's always such a pleasure..." },
+    { text: "note: huge success" },
+    { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" },
+    { text: "note: sometimes it's ok to just guhhhhh" },
+    { text: "note: in soviet russia, arch installs you." },
+    { text: "note: ¯\\_(ツ)_/¯" },
+    { text: "purchase your tracks today", url: "https://www.youtube.com/watch?v=vr2ays5a-Rc.mp4"},
+    { text: "99 DAWWllers", url: "https://www.youtube.com/watch?v=vZOu7zhxGeI"},
+    { text: "100 sachne 80", url: "https://www.youtube.com/watch?v=R-v2Ao8h8Tw"},
+    { text: "note: i had to rewrite this whole mess since i didn't understand my own codebase" },
+    { text: "note: next time i'll commenmt more" },
+    { text: "note: some of the quotes here were stolen from the loadingquotes vencord plugin (sorry)" },
+    { text: "thinking of a funny quote..." },
+    { text: "welcome to nginx!" },
+    { text: "�(repeat like 30 times)" },
+    { text: "note: i'm not a cat.. or am i?", url: "https://www.youtube.com/watch?v=32EJg8lqJgQ" },
+    // holy shit copilot suggested the message above ... and i added the "or am i" part 
+    { text: "i don't remember this being in the ost", url: "https://www.youtube.com/watch?v=rGITOAjbABc" },
+    { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
+    { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
+    { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
+    { text: "the buttons are broken, i know. i will fix them later"}
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Open the "info" tab by default
-    openTab(null, 'home');
-    //stuff for randomized footer
-    var messages = [
-        { text: "note: near a tree by a river, there's a hole in the ground..." },
-        { text: "note: :3" },
-        { text: ":)", url: "/media/mystery.mp4" },
-        { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
-        { text: "tip: did you know? refreshing this site changes this text." },
-        { text: "tip: don't mine at night" , url: "https://www.youtube.com/watch?v=X_XGxzMrq04"},
-        { text: "note: well here we are again, it's always such a pleasure..." },
-        { text: "note: huge success" },
-        { text: "note: i'd just like to interject for a moment...", url: "/extras/stallman.html" },
-        { text: "note: sometimes it's ok to just guhhhhh" },
-        { text: "note: in soviet russia, arch installs you." },
-        { text: "note: ¯\\_(ツ)_/¯" },
-        { text: "purchase your tracks today", url: "https://www.youtube.com/watch?v=vr2ays5a-Rc.mp4"},
-        { text: "99 DAWWllers", url: "https://www.youtube.com/watch?v=vZOu7zhxGeI"},
-        { text: "100 sachne 80", url: "https://www.youtube.com/watch?v=R-v2Ao8h8Tw"},
-        { text: "note: i had to rewrite this whole mess since i didn't understand my own codebase" },
-        { text: "note: next time i'll commenmt more" },
-        { text: "note: some of the quotes here were stolen from the loadingquotes vencord plugin (sorry)" },
-        { text: "thinking of a funny quote..." },
-        { text: "welcome to nginx!" },
-        { text: "�(repeat like 30 times)" },
-        { text: "note: i'm not a cat.. or am i?", url: "https://www.youtube.com/watch?v=32EJg8lqJgQ" },
-        // holy shit copilot suggested the message above ... and i added the "or am i" part
-        { text: "i don't remember this being in the ost", url: "https://www.youtube.com/watch?v=rGITOAjbABc" },
-        { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
-        { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
-        { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
-        { text: "the buttons are broken, i know. i will fix them later"}
+];
+function messagesindex() { //useful debugging function: check how many messages there are
+    console.log("the messages array has " + (messages.length - 1) + " items");
 
-    ];
+    // Count and log the number of messages with a link
+    var messagesWithLink = messages.filter(message => message.url).length;
+    console.log("the messages array has " + messagesWithLink + " items with a link");
+}
 
-    var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+function showMessages() { //useful debugging function: show all messages in the console
+    console.log("here are the messages: ");
+    for (var i = 0; i < messages.length; i++) {
+        var messageText = i + ": '" + messages[i].text + "'";
+        if (messages[i].url) {
+            messageText += " HAS LINK: " + messages[i].url;
+        }
+        console.log(messageText);
+    }
+}
 
-    var footer = document.getElementById('footer');
-    footer.innerHTML = '<input class="noteMS" type="image" height="30" width="30" src="/media/music.png" name="B1" onclick="randomlink()"><span class="music-note"></span>';
+// Define the function to update the footer message
+function updateFooterMessage(index) {
+    if (index === 'last') {
+        index = messages.length - 1;
+    }
+    if (typeof index !== 'number') {
+        console.error("Invalid input. Please provide a number as the index.");
+        return;
+    }
+    if (index < 0 || index >= messages.length) {
+        console.error("Invalid index. Please provide a valid index between 0 and " + (messages.length - 1));
+        return;
+    }
+    
+    var randomMessage = messages[index];
+    var messageContainer = document.querySelector('.message-container');
+    messageContainer.innerHTML = '';
 
     if (randomMessage.url) {
         var link = document.createElement('a');
         link.href = randomMessage.url;
         link.textContent = randomMessage.text;
         link.style.color = "white"; // Change the color if needed
-        footer.appendChild(link);
+        link.target = "_blank"; //makes link open in new tab hopefully
+        messageContainer.appendChild(link);
     } else {
-        footer.appendChild(document.createTextNode(randomMessage.text));
+        messageContainer.appendChild(document.createTextNode(randomMessage.text));
     }
+    console.log("message updated to: " + index);
+}
+// Example usage: updateFooterMessage(0); // This will update the footer with the first message
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateFooterMessage(Math.floor(Math.random() * messages.length));
 });
-var geometryDash = new Audio('/media/gd.mp3');
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    console.error("you nosy little shit, now close the console! >:3")
+    console.error("unless you contribute to coding and need to debug some stuff")
+    
+    //tab stuff
+    document.addEventListener('DOMContentLoaded', function() {
+        // Open the "info" tab by default
+        openTab(null, 'info');
+    
+        // Check if there's a last opened tab stored in localStorage
+        var lastTab = localStorage.getItem('lastTab');
+        console.log('last tab from localStorage:', lastTab)
+        if (lastTab) {
+            openTab(null, lastTab);
+        } else {
+            console.error('No last tab found in localStorage.');
+        }
+    
+        // Add event listeners to tab buttons to store the last opened tab
+        var tablinks = document.getElementsByClassName('tablinks');
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].addEventListener('click', function(evt) {
+                var cityName = evt.currentTarget.getAttribute('data-city');
+                console.log('Clicked tab data-city:', cityName);
+                localStorage.setItem('lastTab', cityName);
+            });
+        }
+    });
+});
+
+
 // does this even get used? i don't think so.
 // i should probably remove it.
 // nah, it could break stuff.
 // i'll just leave it here.
 // yeah.
 
-var randomlinks = [];
-randomlinks[0] = "https://www.youtube.com/watch?v=yGZr98GEs0U";
-randomlinks[1] = "https://www.youtube.com/watch?v=AS58aeJQI4Y";
-randomlinks[2] = "https://www.youtube.com/watch?v=cygu65ytwTc";
-randomlinks[3] = "https://www.youtube.com/watch?v=M9J6DKJXoKk";
-randomlinks[4] = "https://www.youtube.com/watch?v=20dIl2fl5GM";
-randomlinks[5] = "https://www.youtube.com/watch?v=BwUBkKKP27A";
-randomlinks[6] = "/media/gd.mp3";
-randomlinks[7] = "https://www.youtube.com/watch?v=5kca9KVKy04";
-randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
-randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
-randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
-randomlinks[11] = "https://www.youtube.com/watch?v=FmW6RNT2jCs";
-randomlinks[12] = "https://www.youtube.com/watch?v=W_qNvDLDHd0";
+
 
 function randomlink() {
     console.log("randomizing link for music...")
@@ -101,3 +154,20 @@ function showSection(sectionId, element) {
     });
     element.classList.add('active-tab');
 }
+
+
+
+var randomlinks = [];
+randomlinks[0] = "https://www.youtube.com/watch?v=yGZr98GEs0U";
+randomlinks[1] = "https://www.youtube.com/watch?v=AS58aeJQI4Y";
+randomlinks[2] = "https://www.youtube.com/watch?v=cygu65ytwTc";
+randomlinks[3] = "https://www.youtube.com/watch?v=M9J6DKJXoKk";
+randomlinks[4] = "https://www.youtube.com/watch?v=20dIl2fl5GM";
+randomlinks[5] = "https://www.youtube.com/watch?v=BwUBkKKP27A";
+randomlinks[6] = "/media/gd.mp3";
+randomlinks[7] = "https://www.youtube.com/watch?v=5kca9KVKy04";
+randomlinks[8] = "https://www.youtube.com/watch?v=utP11PQEsZw";
+randomlinks[9] = "https://www.youtube.com/watch?v=5BZLz21ZS_Y";
+randomlinks[10] = "https://www.youtube.com/watch?v=Si8PyULlt7Q";
+randomlinks[11] = "https://www.youtube.com/watch?v=FmW6RNT2jCs";
+randomlinks[12] = "https://www.youtube.com/watch?v=W_qNvDLDHd0";
