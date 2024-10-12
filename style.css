@@ -47,6 +47,8 @@ body {
     margin-top: 60px; 
 }
 
+/* credit: https://codepen.io/nuhmanpk/pen/XWqBrae */
+
 button {
     position: relative;
     background: #444;
@@ -58,6 +60,9 @@ button {
     font-size: 1rem;
     padding: 1rem 3rem;
     transition: 0.2s;
+    width: 160px;
+    height: 75px;
+    margin-bottom: 20px;
   }
   
   button:hover {
@@ -150,4 +155,15 @@ button {
   .bttnInfo {
     font-size: small;
     margin-top: 10px;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.center-image {
+    margin-top: 20px;
 }

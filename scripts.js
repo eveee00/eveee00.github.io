@@ -1,9 +1,12 @@
 // i didn't want to rewrite the whole js file, so i'm gonna just remove stuff like the tab system later.
+// update: i remade the tab system.
 // i also removed some of the footer text about the windows OOBE, since it wasn't even remotely funny.
+
+// i removed this and it broke a bunch of stuff, so i'll just deal with the shitty error i get in the console.
 
 document.addEventListener('DOMContentLoaded', function() {
     // Open the "info" tab by default
-    openTab(null, 'info');
+    openTab(null, 'home');
     //stuff for randomized footer
     var messages = [
         { text: "note: near a tree by a river, there's a hole in the ground..." },
@@ -33,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
         { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
         { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
-
+        { text: "the buttons are broken, i know. i will fix them later"}
 
     ];
 
@@ -53,6 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 var geometryDash = new Audio('/media/gd.mp3');
+// does this even get used? i don't think so.
+// i should probably remove it.
+// nah, it could break stuff.
+// i'll just leave it here.
+// yeah.
+
 var randomlinks = [];
 randomlinks[0] = "https://www.youtube.com/watch?v=yGZr98GEs0U";
 randomlinks[1] = "https://www.youtube.com/watch?v=AS58aeJQI4Y";
@@ -73,8 +82,11 @@ function randomlink() {
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
 }
 
-console.error("you nosy little shit, now close the console! >:3")
+console.warn("you nosy little shit, now close the console! >:3")
 // LMAOOOO I MADE A SPELLING MISTAKE AND ONLY NOW NOTICED IT
+console.warn("unless you actually know what you're doing (unlike me)")
+console.warn("by the way, you should NEVER paste stuff into here unless you exactly know what it does.")
+
 
 function showSection(sectionId, element) {
     var sections = document.querySelectorAll('.main');

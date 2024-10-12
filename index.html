@@ -15,7 +15,8 @@
     <div class="tab-bar">
         <a href="#home" onclick="showSection('home', this)">home</a>
         <a href="#links" onclick="showSection('links', this)">links</a>
-        <a href="#contact" onclick="showSection('contact', this)">Contact</a>
+        <a href="#projects" onclick="showSection('projects', this)">projects</a>
+        <a href="#specs" onclick="showSection('specs', this)">specs</a>
     </div>
     <div id="home" class="main">
         <h1>welcome to my page!</h1>
@@ -26,14 +27,40 @@
         <p>i'm still just a beginner programmer though, but i'm currently learning C#.</p>
     </div>
     <div id="links" class="main" style="display:none;">
+        <h1>socials:</h1>
+        <div id="links-buttons">
+            <button style="--clr:#0FF0FC" onclick="window.open('https://www.youtube.com/@max373-1.0', '_blank')">
+                <span>youtube</span><i></i>
+            </button>
+            <button style="--clr:#0FF0FC" onclick="window.open('https://twitter.com/eveee00000', '_blank')">
+                <span>twitter</span><i></i>
+            </button>
+            <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/', '_blank')">
+                <span>github</span><i></i>
+            </button>
+        </div>
+        <img class="center-image" src="https://lanyard.cnrad.dev/api/675299056070688789" alt="Discord Status" width="350px">
+    </div>
+    
+    <div id="projects" class="main" style="display:none;">
         <h1>projects</h1>
         <p>these are the projects i'm working on. there is currently not much here though.</p>
         <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/eveee00.github.io', '_blank')"><span>this site</span><i></i></button>
         <p class="bttnInfo">website that you're currently on.</p>
+        <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/vmware-discordrpc', '_blank')"><span>vmware-rpc</span><i></i></button>
+        <p class="bttnInfo">a discord rich presence for vmware written in python.</p>
+        <button style="--clr:#0FF0FC" onclick="window.open('https://github.com/eveee00/eveee00.github.io', '_blank')"><span>this site</span><i></i></button>
+        <p class="bttnInfo">website that you're currently on.</p>
     </div>
-    <div id="contact" class="main" style="display:none;">
-        <h1>Contact Me</h1>
-        <p></p>
+    <div id="specs" class="main" style="display:none;">
+        <h1>pc specs</h1>
+        <p>cpu: amd ryzen 7 5800x</p>
+        <p>gpu: nvidia rtx 3060</p>
+        <p>motherboard: msi mag b550 tomahawk</p>
+        <p>os: endeavouros</p>
+        <p>de: kde plasma 6.2</p>
+        <p>storage: samsung ssd 990 evo 2tb</p>
+        <p>ram: corsair vengeance lpx 4x 8gb</p>
     </div>
     <script>
     </script>
