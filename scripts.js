@@ -183,3 +183,22 @@ function toggleMenu() {
     var tabs = document.querySelector('.tab-bar');
     tabs.classList.toggle('active'); // Toggle the active class to show/hide tabs
 }
+
+// Add this to your scripts.js
+function showSection(sectionId, element) {
+    // Hide all sections
+    document.querySelectorAll('.main').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab-bar a').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Add active class to the clicked tab
+    element.classList.add('active');
+}
