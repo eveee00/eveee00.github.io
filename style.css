@@ -10,7 +10,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     margin: 0;
 }
 
@@ -205,4 +206,51 @@ button {
         border: 3px transparent #ffffff;
         padding: 5px;
         z-index: 1;
+}
+
+/* mobile view, attempt 3. */
+.hamburger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    z-index: 1200;
+    top: 5px;
+    left: 5px;
+  }
+  .tab-bar {
+    display: none;
+    position: fixed; /* Fix it to the screen */
+    top: 0;
+    left: 0%;  /* chatgpt said 0% would work, it did not, jank fix: 50% left */
+    width: 100vw; /* Fullscreen width */
+    height: 100vh; /* Fullscreen height */
+    background-color: rgba(255, 255, 255, 0.2); /* Dark background with transparency */  
+    z-index: 1000; /* Make sure it appears on top */
+    flex-direction: column; /* Stack the tabs vertically */
+    justify-content: center; /* Center the tabs vertically */
+    align-items: center; /* Center the tabs horizontally */
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+  }
+  .tab-bar.active {
+    display: flex;
+  }
+  .tab-bar a {
+    margin-top: 10px;
+  }
+  .main {
+    margin-top: 10px;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
 }

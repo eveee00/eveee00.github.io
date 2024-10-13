@@ -33,7 +33,7 @@ var messages = [
     { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
     { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
     { text: "the buttons are broken, i know. i will fix them later" },
-    { text: "i67 was here" },
+    { text: "i67 was here", font: "Odibee Sans" },
     { text: "yeah, the stallman one doesn't work right now." },
     { text: "note: the fake geometry dash ost is fire", url: "https://www.youtube.com/watch?v=AS58aeJQI4Y" },
     { text: "ALL MY FELLAS", url: "https://www.youtube.com/watch?v=cygu65ytwTc"},
@@ -101,6 +101,10 @@ function updateFooterMessage(index) {
     } else {
         messageContainer.appendChild(document.createTextNode(randomMessage.text));
     }
+    if (randomMessage.font) {
+        messageContainer.style.fontFamily = randomMessage.font;
+        messageContainer.style.fontSize = "25px";
+    }
     console.log("message updated to: " + index);
 }
 // Example usage: updateFooterMessage(0); // This will update the footer with the first message
@@ -111,8 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    console.error("you nosy little shit, now close the console! >:3")
-    console.error("unless you contribute to coding and need to debug some stuff")
     
     //tab stuff
     document.addEventListener('DOMContentLoaded', function() {
@@ -173,4 +175,11 @@ function showSection(sectionId, element) {
         tab.classList.remove('active-tab');
     });
     element.classList.add('active-tab');
+    
+    toggleMenu()
+}
+
+function toggleMenu() {
+    var tabs = document.querySelector('.tab-bar');
+    tabs.classList.toggle('active'); // Toggle the active class to show/hide tabs
 }
