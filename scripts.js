@@ -32,7 +32,6 @@ var messages = [
     { text: "one, two, uhhh... i forgot, 4...", url: "https://www.youtube.com/watch?v=jpw2ebhTSKs"},
     { text: "why did i even put this in?", url: "https://www.youtube.com/watch?v=WHkewGc9n58"},
     { text: "O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA", url: "https://www.youtube.com/watch?v=h-mUGj41hWA" },
-    { text: "the buttons are broken, i know. i will fix them later" },
     { text: "i67 was here", font: "Odibee Sans" },
     { text: "yeah, the stallman one doesn't work right now." },
     { text: "note: the fake geometry dash ost is fire", url: "https://www.youtube.com/watch?v=AS58aeJQI4Y" },
