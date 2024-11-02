@@ -46,6 +46,7 @@ var messages = [
     { text: "the 4 peters if they were cool", url: "https://www.youtube.com/watch?v=Si8PyULlt7Q"},
     { text: "99 DAWWllers, but everywhere", url: "https://www.youtube.com/watch?v=FmW6RNT2jCs"},
     { text: "note: mobile view is only borken in safari, so i'm not bothering to fix it."},
+    { text: "strawberries", url: "https://www.youtube.com/watch?v=1rwAvUvvQzQ"},
 ];
 function messagesindex() { //useful debugging function: check how many messages there are
     console.log("the messages array has " + (messages.length - 1) + " items");
