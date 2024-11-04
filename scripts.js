@@ -169,6 +169,8 @@ function showSection(sectionId, element) {
         tab.classList.remove('active-tab');
     });
     element.classList.add('active-tab');
+
+    sessionStorage.setItem('lastTab', sectionId);
     
     toggleMenu()
 }
@@ -195,4 +197,20 @@ function showSection(sectionId, element) {
 
     // Add active class to the clicked tab
     element.classList.add('active');
+
+    sessionStorage.setItem('lastTab', sectionId);
 }
+
+// Open the last opened tab on page load from sessionStorage
+document.addEventListener('DOMContentLoaded', function() {
+    var lastTab = sessionStorage.getItem('lastTab');
+    if (lastTab) {
+        // Find the corresponding tab element
+        var lastTabElement = document.querySelector(`.tab-bar a[href="#${lastTab}"]`);
+        if (lastTabElement) {
+            // Open the last tab
+            showSection(lastTab, lastTabElement);
+        }
+    }
+});
+// yippee i made this -i67
