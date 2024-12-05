@@ -178,7 +178,6 @@ function toggleMenu() {
     tabs.classList.toggle('active'); // Toggle the active class to show/hide tabs
 }
 
-// Add this to your scripts.js
 function showSection(sectionId, element) {
     // Hide all sections
     document.querySelectorAll('.main').forEach(section => {
@@ -196,4 +195,3 @@ function showSection(sectionId, element) {
     // Add active class to the clicked tab
     element.classList.add('active');
 }
-*/
