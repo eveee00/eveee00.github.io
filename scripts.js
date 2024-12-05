@@ -4,12 +4,6 @@
 
 // i removed this and it broke a bunch of stuff, so i'll just deal with the shitty error i get in the console.
 //stuff for randomized footer
-
-/*
-NOTE:
-I definetly need to move this to some api of some sorts. maybe just another github pages website that gives the quote in plaintext. this js file is getting too big.
-*/
-
 var messages = [
     { text: "note: near a tree by a river, there's a hole in the ground..." },
     { text: "note: :3" },
@@ -143,6 +137,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// does this even get used? i don't think so.
+// i should probably remove it.
+// nah, it could break stuff.
+// i'll just leave it here.
+// yeah.
+
+// yeah i removed it lmao
+
+
 function randomlink() {
     console.log("randomizing link for music...")
     window.open(randomlinks[Math.floor(Math.random() * randomlinks.length)]);
@@ -153,8 +156,6 @@ console.warn("you nosy little shit, now close the console! >:3")
 console.warn("unless you actually know what you're doing (unlike me)")
 console.warn("by the way, you should NEVER paste stuff into here unless you exactly know what it does.")
 
-// this is old stuff (for the old tab system.) Maybe I'l lreuse this for the new hamburger menu.
-/*
 
 function showSection(sectionId, element) {
     var sections = document.querySelectorAll('.main');
@@ -179,6 +180,7 @@ function toggleMenu() {
     tabs.classList.toggle('active'); // Toggle the active class to show/hide tabs
 }
 
+// Add this to your scripts.js
 function showSection(sectionId, element) {
     // Hide all sections
     document.querySelectorAll('.main').forEach(section => {
