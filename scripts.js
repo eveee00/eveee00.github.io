@@ -7,7 +7,7 @@
 var messages = [
     { text: "note: near a tree by a river, there's a hole in the ground..." },
     { text: "note: :3" },
-    { text: ":)", url: "/media/mystery.mp4" },
+    { text: ":)", url: "/media/trol.mp4" },
     { text: "note: yeah i know that the github button isn't aligned, i'll fix it later. update: fixed." },
     { text: "tip: did you know? refreshing this site changes this text." },
     { text: "tip: don't mine at night" , url: "https://www.youtube.com/watch?v=X_XGxzMrq04"},
