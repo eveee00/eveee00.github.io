@@ -14,9 +14,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     height: auto;
-    margin: 10;
+    margin: 10px;
 }
-
 .q {
     color: pink;
 }
@@ -24,4 +23,12 @@ body {
 a {
     color: pink;
     text-decoration: wavy underline;
+}
+
+.audio-player {
+    background-color: black;
+}
+
+iframe {
+    margin: 10px;
 }
