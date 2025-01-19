@@ -1,3 +1,4 @@
+
 html {
     overscroll-behavior: none;
 }
@@ -15,7 +16,7 @@ body {
     min-height: 100vh;
     height: auto;
     margin: 10px;
-    backdrop-filter: blur(10px);
+    
 }
 .q {
     color: pink;
