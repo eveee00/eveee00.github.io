@@ -1,0 +1,12 @@
+html {
+    background: black;
+    font-family: "Fira Code SemiBold", monospace;
+    color: white;
+}
+
+nav {
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    border: white solid 2px;
+}
