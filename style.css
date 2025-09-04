@@ -8,11 +8,10 @@ nav {
     z-index: 999;
     position: sticky;
     top: 0;
-    border: white solid 2px;
+    border: 2px solid white;
 }
 
 .navContainer {
-    padding-right: 2%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,7 +23,6 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 8px;
 }
 
 nav p {
@@ -35,12 +33,18 @@ nav h1 {
     margin: 4px;
 }
 
-nav a {
+.navElements a {
     text-decoration: white underline dotted;
     color: white;
-
+    margin: 8px;
 }
 
 nav a:hover {
     text-decoration: white underline;
+}
+
+section {
+    position: inherit;
+    margin:  1em auto 2em;
+    border: 2px solid white;
 }
