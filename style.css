@@ -33,18 +33,30 @@ nav h1 {
     margin: 4px;
 }
 
-.navElements a {
+a {
     text-decoration: white underline dotted;
     color: white;
-    margin: 8px;
 }
 
-nav a:hover {
+a:hover {
     text-decoration: white underline;
+}
+
+.navElements a {
+    margin: 8px;
 }
 
 section {
     position: inherit;
     margin:  1em auto 2em;
     border: 2px solid white;
+    width: auto;
+}
+
+.mainContainer {
+    
+}
+
+.mainContainer p, h1{
+    margin: 6px;
 }
