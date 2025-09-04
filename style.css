@@ -10,3 +10,37 @@ nav {
     top: 0;
     border: white solid 2px;
 }
+
+.navContainer {
+    padding-right: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navElements {
+    text-align: right;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 8px;
+}
+
+nav p {
+    margin: 0;
+    padding: 0;
+}
+nav h1 {
+    margin: 4px;
+}
+
+nav a {
+    text-decoration: white underline dotted;
+    color: white;
+
+}
+
+nav a:hover {
+    text-decoration: white underline;
+}
