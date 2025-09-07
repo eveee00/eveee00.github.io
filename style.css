@@ -9,6 +9,7 @@ nav {
     position: sticky;
     top: 0;
     border: 2px solid white;
+    background: black;
 }
 
 .navContainer {
@@ -48,15 +49,12 @@ a:hover {
 
 section {
     position: inherit;
-    margin:  1em auto 2em;
+    margin:  1em auto 1em;
     border: 2px solid white;
     width: auto;
+
 }
 
-.mainContainer {
-    
-}
-
-.mainContainer p, h1{
+.mainContainer p, h1, h2{
     margin: 6px;
 }
