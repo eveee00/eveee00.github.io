@@ -11,7 +11,7 @@ nav {
     border: 2px solid;
     border-color: rgb(71, 71, 71);
     background: black;
-    transition: 0.2s ease;
+    transition: 0.2s ease-in-out;
 }
 
 nav:hover {
@@ -65,7 +65,7 @@ section {
 }
 
 section:hover {
-    transition: 0.2s ease;
+    transition: 0.2s ease-in-out;
     border-color: white;;
 }
 
