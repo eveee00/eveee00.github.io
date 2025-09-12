@@ -8,8 +8,14 @@ nav {
     z-index: 999;
     position: sticky;
     top: 0;
-    border: 2px solid white;
+    border: 2px solid;
+    border-color: rgb(71, 71, 71);
     background: black;
+    transition: 0.2s ease;
+}
+
+nav:hover {
+    border-color: white;
 }
 
 .navContainer {
@@ -37,6 +43,8 @@ nav h1 {
 a {
     text-decoration: white underline dotted;
     color: white;
+    padding-top: 5px;
+    text-underline-offset: 2px;
 }
 
 a:hover {
@@ -50,9 +58,15 @@ a:hover {
 section {
     position: inherit;
     margin:  1em auto 1em;
-    border: 2px solid white;
+    border: 2px solid;
+    border-color: rgb(71, 71, 71);
     width: auto;
 
+}
+
+section:hover {
+    transition: 0.2s ease;
+    border-color: white;;
 }
 
 .mainContainer p, h1, h2{
