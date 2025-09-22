@@ -61,14 +61,30 @@ section {
     border: 2px solid;
     border-color: rgb(71, 71, 71);
     width: auto;
+    transition: 0.2s ease-out;
 
 }
 
 section:hover {
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in;
     border-color: white;;
 }
 
 .mainContainer p, h1, h2{
     margin: 6px;
+}
+
+.npIcons {
+    text-align: right;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+
+.discordStatus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
