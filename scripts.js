@@ -21,6 +21,8 @@ function updateNowPlayingText(data) {
         nowPlaying.innerHTML = "<p>I'm currently offline!</p>";
     } else if (discord_status === "idle") {
         nowPlaying.innerHTML = "<p>I'm online, but away!</p>";
+    } else if (discord_status === "dnd") {
+        nowPlaying.innerHTML = "<p>I'm online, but on DND!</p>";
     } else {
         nowPlaying.innerHTML = "Loading...";
     }
@@ -38,6 +40,10 @@ function setLanyardStatus() {
             const nowPlaying = document.getElementById("nowPlaying");
             if (nowPlaying) nowPlaying.innerHTML = "cannot update nowPlaying!";
         });
+}
+
+function setOsuStatus() {
+
 }
 
 addEventListener("DOMContentLoaded", () => {
