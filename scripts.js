@@ -38,7 +38,7 @@ function setLanyardStatus() {
         })
         .catch(() => {
             const nowPlaying = document.getElementById("nowPlaying");
-            if (nowPlaying) nowPlaying.innerHTML = "cannot update nowPlaying!";
+            if (nowPlaying) nowPlaying.textContent = "cannot update nowPlaying!";
         });
 }
 
