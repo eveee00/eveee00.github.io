@@ -61,14 +61,40 @@ section {
     border: 2px solid;
     border-color: rgb(71, 71, 71);
     width: auto;
+    transition: 0.2s ease-out;
 
 }
 
 section:hover {
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in;
     border-color: white;;
 }
 
 .mainContainer p, h1, h2{
     margin: 6px;
+}
+
+.npIcons {
+    text-align: right;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+
+/* 
+* there is DEFO a better way to do this
+* but i'm too lazy to actually do it in that better way lol
+*/
+
+
+.npIconsGrey {
+    filter: invert(22%) sepia(0%) saturate(525%) hue-rotate(203deg) brightness(90%) contrast(75%);
+}
+
+.discordStatus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
