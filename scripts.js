@@ -17,7 +17,6 @@ function updateNowPlayingText(data) {
 
     if (discord_status === "online") {
         nowPlaying.innerHTML = "<p>I'm online, but not doing anything!</p>";
-        
     } else if (discord_status === "offline") {
         nowPlaying.innerHTML = "<p>I'm currently offline!</p>";
     } else if (discord_status === "idle") {

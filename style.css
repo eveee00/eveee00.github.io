@@ -81,11 +81,16 @@ section:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 5px;
-    filter: invert(22%) sepia(0%) saturate(525%) hue-rotate(203deg) brightness(90%) contrast(75%);
 }
 
-.npIconsOnline {
-    filter: none;
+/* 
+* there is DEFO a better way to do this
+* but i'm too lazy to actually do it in that better way lol
+*/
+
+
+.npIconsGrey {
+    filter: invert(22%) sepia(0%) saturate(525%) hue-rotate(203deg) brightness(90%) contrast(75%);
 }
 
 .discordStatus {
