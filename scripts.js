@@ -29,7 +29,7 @@ function updateNowPlayingText(data) {
 }
 
 function setLanyardStatus() {
-    fetch("https://api.lanyard.rest/v1/users/675299056070688789")
+    fetch("https://api.lanyard.rest/v1/users/1454841600974000159")
         .then(response => response.json())
         .then(json => {
             if (json && json.success && json.data) {
